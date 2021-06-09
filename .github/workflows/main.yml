@@ -15,6 +15,6 @@ jobs:
         key_file: id_ecdsa
     - uses: actions/checkout@v2
     - run: sudo su
-    - run: source nethunter-fs/build.sh -m -a arm64 
+    - run: sudo nethunter-fs/build.sh -m -a arm64 
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@master
