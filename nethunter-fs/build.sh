@@ -224,19 +224,19 @@ export -f chroot_do
 
 # Stage 1 - Debootstrap creates basic chroot
 echo "[+] Starting stage 1 (debootstrap)"
-. stages/stage1
+. nethunter-fs/stages/stage1
 
 # Stage 2 - Adds repo, bash_profile, hosts file
 echo "[+] Starting stage 2 (repo/config)"
-. stages/stage2
+. nethunter-fs/stages/stage2
 
 # Stage 3 - Downloads all packages, modify configuration files
 echo "[+] Starting stage 3 (packages/installation)"
-. stages/stage3
+. nethunter-fs/stages/stage3
 
 # Cleanup stage
 echo "[+] Starting stage 4 (cleanup)"
-. stages/stage4-cleanup
+. nethunter-fs/stages/stage4-cleanup
 
 # Unmount and fix nano
 cleanup_host
