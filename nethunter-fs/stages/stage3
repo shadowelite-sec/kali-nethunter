@@ -47,6 +47,9 @@ if [ "$build_size" = full ]; then
 
 	cat << EOF >> "$rootfs/third-stage"
 
+#install sudo
+chroot $rootfs wget http://http.kali.org/kali/pool/main/s/sudo/sudo_1.9.5p2-3_arm64.deb
+chroot $rootfs dpkg -i sudo_1.9.5p2-3_arm64.deb
 # Enable PHP in Apache
 a2enmod php7.3
 
